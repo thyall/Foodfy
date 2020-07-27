@@ -48,92 +48,35 @@ nav a:hover{
     transition: color 200ms;
 }
 
-/*==wrapper==*/
-#wrapper {
-    max-width: 940px;
-    max-height: 366px;
-    margin: 0 auto;
-    margin-top: 36px;
-    border-radius: 30px;
-    background-color: #FBDFDB;
-
-    display: flex;    
-    align-content: space-between;
-}
-
-#wrapper_content h1 {
-    font-family: Roboto-Bold;
-    font-size: 32px;
-    color: #111111;
-    line-height: 38px;
-    size: 305px;
-    padding: 0;
-    margin: 67px 259px 10px 60px;
-    width: 305px;
-}
-
-#wrapper_content p {
-    opacity: 0.7;
-    font-family: Roboto-Regular;
-    font-size: 18px;
-    color: #000000;
-    line-height: 28px;
-    padding: 0;
-    height: 84px;
-    width: 316px;
-    margin: 0px 117px 10px 60px;
-}
-
-#wrapper_img {
-    max-height: 300px;
-    width: 216px;
-    padding: 0;
-    margin-top: 36px;
-    margin-left: 248px;
-}
-
-#text {
-    font-family: Roboto-Bold;
-    font-size: 24px;
-    color: #111111;
-    line-height: 28px;
-}
-
-/*==Receitas==*/
 article {
     max-width: 940px;
-    max-height: 466px;
     margin: 0 auto;
     margin-top: 50px;
 }
 
-.receitas {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+article h1 {
+    margin-bottom: 20px;
+    font-family: Roboto-Bold;
+    line-height: 28px;
+    font-size: 24px;
+    color: #111111;
+}
+
+article h2 {
+    font-family: Roboto-Bold;
+    font-size: 20px;
+    color: #111111;
+    line-height: 28px;
+}
+
+article p {
     font-family: Roboto-Regular;
-}
-
-.receita img {
-    width: 300px;
-    border-radius: 15px;
-}
-
-.receita h3 {
     font-size: 18px;
-    font-weight: 400;
-    line-height: 21px;
-    margin-top: 20px;
+    color: #444444;
+    line-height: 28px;
+    margin-bottom: 30px;
 }
 
-.receita p {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16px;
-    margin-top: 5px;
-    color: #777777;
-}
 
 /*==Footer==*/
 footer {
@@ -153,4 +96,3 @@ footer p {
     line-height: 16px;
     color: #999999;
 }
-
