@@ -1,174 +1,33 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Foodfy</title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-      <link rel="stylesheet" href="/css/receitas.css">
-    </head>
+{% extends "layout.njk" %}
 
-    <body>
-        <header>
-            <nav>
-                <a class="logo" href="#"><img src="/assets/logo.png" alt="FoodFy"></a>
-                <a href="indexFoody.html">Home</a>
-                <a href="about.html">Sobre</a>
-            </nav>
-        </header>
+{% block title %}
+    <title>Foodfy - Receitas</title>
+{% endblock title %}
 
-        <article>
-            <section class="receitas">
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/burger.png" alt="img">
-                    </div>
+{% block styles %}
+    <link rel="stylesheet" href="/styles/receitas.css">
+{% endblock styles %}
 
-                    <div class="receita_content">
-                        <h3>Triplo Bacon Burguer</h3>
-                        <p>Por Jorge Relato</p>
-                    </div>
+{% block content %}
+
+    <article>
+        <section class="receitas">
+
+            {% for item in items%}
+            <div class="receita" id="{{loop.index0}}">
+                <div class="receita_img">
+                    <img src="{{item.image}}" alt="Imagem de {{item.title}}">
                 </div>
 
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/pizza.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Pizza 4 estações </h3>
-                        <p>Por Fabiana Melo</p>
-                    </div>
+                <div class="receita_content">
+                    <h3>{{item.title}}</h3>
+                    <p>{{item.author}}</p>
                 </div>
+            </div>      
+            {% endfor %}
 
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/espaguete.png" alt="img">
-                    </div>
+        </section>
+    </article>
 
-                    <div class="receita_content">
-                        <h3>Espaguete ao Alho</h3>
-                        <p>Por Júlia Kinoto</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/lasanha.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Lasanha mac n’ cheese</h3>
-                        <p>Por Juliano Vieira</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/doce.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Docinhos pão-do-céu</h3>
-                        <p>Por Ricardo Golveia</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/asinhas.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Asinhas de frango ao barbecue</h3>
-                        <p>Por Vania Steroki</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/burger.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Triplo Bacon Burguer</h3>
-                        <p>Por Jorge Relato</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/pizza.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Pizza 4 estações </h3>
-                        <p>Por Fabiana Melo</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/espaguete.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Espaguete ao Alho</h3>
-                        <p>Por Júlia Kinoto</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/lasanha.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Lasanha mac n’ cheese</h3>
-                        <p>Por Juliano Vieira</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/doce.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Docinhos pão-do-céu</h3>
-                        <p>Por Ricardo Golveia</p>
-                    </div>
-                </div>
-
-                <div class="receita">
-                    <div class="receita_img">
-                        <img src="/assets/asinhas.png" alt="img">
-                    </div>
-
-                    <div class="receita_content">
-                        <h3>Asinhas de frango ao barbecue</h3>
-                        <p>Por Vania Steroki</p>
-                    </div>
-                </div>
-            </section>
-        </article>
-
-        <div class="modal-overlay">
-            <div class="modal">
-                <a class="close-modal">
-                    <i class="material-icons">close</i>
-                </a>            
-
-                <div class="modal-content">
-                    <iframe src="" frameborder="0"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <script src="/src/script.js"></script>
-
-        <!-- rodape -->
-        <footer class="footer">
-            <p>Todos direitos reservados, receitas Foodfy.</p>
-        </footer>
-    </body>
-</html>
+    <script src="/scripts/script.js"></script>
+{% endblock %}

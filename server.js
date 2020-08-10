@@ -26,6 +26,16 @@ server.get("/recipes", (req, res) => {
     return res.render("recipes", {items: recipes})
 })
 
+server.get("/recipes/:index", function (req, res) {
+    const recipeIndex = req.params.index
+
+    if(!recipes[recipeIndex]) {
+        return res.render("not-found")
+    }
+
+    return res.render("recipe", {item: recipes[recipeIndex]})
+})
+
 server.use(function(req, res) {
     res.status(404).render("not-found");
   });
