@@ -53,25 +53,5 @@ button3.addEventListener('click', function () {
   $("#button1").click(function(){
     $("#content-show1").toggleClass("hidden");
   });
+  depois repete mais 3 vezes ou cria uma função :)
 */
-
-
-
-/*
-function troca(button, recipe) {  
-  if(button.innerHTML == "ESCONDER")
-  {
-    button.innerHTML = "MOSTRAR"
-    recipe.classList.add('hidden')
-    recipe.classList.remove('visible')
-  } else {
-    button.innerHTML = "ESCONDER"
-    recipe.classList.remove('hidden')
-    recipe.classList.add('visible')
-  } 
-}
-
-button1.addEventListener("click", troca(button1, recipes1))
-button2.addEventListener('click', troca(button2, recipes2))
-button3.addEventListener('click', troca(button3, recipes3))*/
-
