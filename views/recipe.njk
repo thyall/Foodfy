@@ -11,6 +11,7 @@
 
 
 {% block content %}
+
     <section class="recipe">
         <div class="recipe-header">
             <div class="recipe-image">
@@ -26,40 +27,43 @@
         <div class="recipe-content">
             <div class="recipe-ingredients">
                 <h2>Ingredientes</h2>
-                <h6 class="button">ESCONDER</h6>
+
+                <h6 id="button1">ESCONDER</h6>
             </div>
 
             <div class="ingredients-list">
-                <ul>
+                <ul id="content-show1">
                     {% for itens in item.ingredients %}                  
-                        <li class="content-show">{{itens}}</li>
+                        <li>{{itens}}</li>
                     {% endfor %}
                 </ul>
             </div>
 
             <div class="recipe-preparation">
                 <h2>Modo de preparo</h2>
-                <h6 class="button">ESCONDER</h6>
+
+                <h6 id="button2">ESCONDER</h6>
             </div>
             <div class="preparation-list">
                 
-                {% for itens in item.preparation %}
-                
-                <p class="content-show">{{itens}}</p>
-                {% endfor %}
+                <ul id="content-show2">
+                    {% for itens in item.preparation %}                
+                        <li id="content-show2">{{itens}}</li>
+                    {% endfor %}
+                </ul>
                 
             </div>
 
             <div class="recipe-info">
                 <h2>Informações adicionais</h2>
-                <h6 class="button">ESCONDER</h6>
+
+                <h6 id="button3">ESCONDER</h6>
             </div>
             <div class="info-text">            
-                <p class="content-show">{{item.information}}</p>
+                <p id="content-show3">{{item.information}}</p>
             </div>
         </div>
-    </section>
-    
+    </section>    
 
     <script src="/scripts/recipe.js"></script>
 

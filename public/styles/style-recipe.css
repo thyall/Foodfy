@@ -76,6 +76,10 @@
     margin-left: 32px;
 }
 
+.preparation-list {
+    margin-left: 14px;
+}
+
 .ingredients-list,
 .preparation-list,
 .info-text {
@@ -87,9 +91,13 @@
     font-weight: 400;
 }
 
-.ingredients-list li.hidden,
-.preparation-list p.hidden,
-.info-text p.hidden {
+.hidden {
     display: none;
 }
+
+.visible {
+    display: block;
+}
+
+
 
