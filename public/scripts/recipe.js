@@ -49,6 +49,15 @@ button3.addEventListener('click', function () {
 })
 
 /*
+  SE eu quiser o modo fácil!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  $("#button1").click(function(){
+    $("#content-show1").toggleClass("hidden");
+  });
+*/
+
+
+
+/*
 function troca(button, recipe) {  
   if(button.innerHTML == "ESCONDER")
   {
@@ -65,3 +74,4 @@ function troca(button, recipe) {
 button1.addEventListener("click", troca(button1, recipes1))
 button2.addEventListener('click', troca(button2, recipes2))
 button3.addEventListener('click', troca(button3, recipes3))*/
+
